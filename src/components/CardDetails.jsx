@@ -7,20 +7,28 @@ const CardDetails = ({product}) => {
   return (
     <Card sx={{
         boxShadow:'none',
+        display:'flex',
+        flexDirection: 'column', 
+        justifyContent: 'center',
+        alignItems: 'center',
     }}>
         <CardMedia
         image={product.image}
-        sx={{
+        sx={{  
             height: '250px',
             width: '250px',
         }}
         />
 
-        <CardContent>
-            <Typography>
+        <CardContent sx={{
+            mt: {xs: 0, md: '-20px'}
+        }}>
+            <Typography variant='h3'>
                 {product.title}
             </Typography>
-            <Typography>
+            <Typography sx={{
+                fontFamily:'cursive'
+            }}>
                 {product.description}
             </Typography>
         </CardContent>
